@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 
 * {
   padding: 0;
@@ -46,12 +46,16 @@ body {
   justify-content: center;
   max-width: 90px;
   max-height: 90px;
-  border: 6px solid grey;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  border: 6px solid rgb(23, 116, 255);
+  box-shadow: 0 2 10px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.8s ease-in-out;
 }
 
 /* Sample CSS for the WHY word */
+
+.word span:first-child {
+  text-transform: uppercase;
+}
 
 .whyWLetter {
   font-size: 72px;
@@ -59,16 +63,18 @@ body {
   color: aqua;
   text-decoration: underline;
   text-transform: uppercase;
-  font-family: 'Piazolla', sans-serif;
+  font-family: "Piazolla", sans-serif;
+  animation: 1s linear infinite alternate glowing;
 }
 
 .whyHLetter {
-  font-size: 30px;
+  font-size: 60px;
   font-weight: bold;
   color: darkgoldenrod;
   text-decoration: overline;
   text-transform: lowercase;
-  font-family: 'Ceviche One', sans-serif;
+  font-family: "Ceviche One", sans-serif;
+  animation: 3s linear infinite alternate glowing;
 }
 
 .whyYLetter {
@@ -76,229 +82,617 @@ body {
   font-weight: normal;
   color: coral;
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Raleway Dots', sans-serif;
+  text-transform: none;
+  font-family: "Raleway Dots", sans-serif;
+  animation: 1s linear infinite alternate glowing;
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px red;
+  }
+  50% {
+    text-shadow: 0 0 20px blue;
+  }
+  100% {
+    text-shadow: 0 0 5px red;
+  }
 }
 
 /* DID word */
 
 .didDLetter {
+  font-size: 60px;
+  font-weight: 400;
+  color: blue;
+  font-family: Arial, sans-serif;
+  text-decoration: overline;
+  text-shadow: 3px 2px 4px rgba(255, 0, 0, 0.2);
+  text-transform: uppercase;
+  animation: glowing 2s linear infinite;
 }
 
 .didILetter {
+  font-size: 79px;
+  font-weight: bold;
+  color: rgb(96, 184, 143);
+  font-family: Arial, "Trebuchet MS";
+  text-decoration-line: line-through;
+  animation: 1s linear infinite alternate glowing;
 }
 
 .didDTwoLetter {
+  font-size: 60px;
+  font-weight: 700;
+  color: #873991;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: none;
+  text-shadow: 3px 2px 4px rgba(221, 72, 72, 0.842);
+  animation: glowing 2s linear infinite;
 }
 
 /* THE word */
 
 .theTLetter {
+  font-size: 76px;
+  font-weight: normal;
+  color: hsl(20, 88%, 66%);
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: underline;
+  text-shadow: 3px 2px 5px rgba(49, 255, 176, 0.568);
+  text-transform: uppercase;
+  animation: glowing 0.2s linear infinite;
 }
 
 .theHLetter {
+  font-size: 76px;
+  font-weight: normal;
+  color: hsl(71, 48%, 54%);
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  text-shadow: 3px 2px 5px rgba(36, 193, 255, 0.568);
+  animation: glowing 3s linear infinite;
 }
 
 .theELetter {
+  font-size: 76px;
+  font-weight: normal;
+  font-family: "Bungee Tint", serif;
+  animation: glowing 3s linear infinite;
 }
 
 /* FRONT-END word */
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .frontendFLetter {
+  font-size: 76px;
+  font-weight: bolder;
+  color: #ff00d0;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(40, 126, 206, 0.356);
+  animation: bounce 3s linear infinite;
 }
 
 .frontendRLetter {
+  font-size: 56px;
+  font-weight: none;
+  color: #fffb00;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(40, 126, 206, 0.356);
+  animation: bounce 2s linear infinite;
 }
 
 .frontendOLetter {
+  font-size: 56px;
+  font-weight: initial;
+  color: #7e0478;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(75, 132, 185, 0.356);
+  animation: bounce 1s linear infinite;
 }
 
 .frontendNLetter {
+  font-size: 60px;
+  font-weight: initial;
+  color: #74f09d;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(111, 238, 149, 0.356);
+  animation: bounce 0.5s linear infinite;
 }
 
 .frontendTLetter {
+  font-size: 60px;
+  font-weight: initial;
+  color: #ffa1f7;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(38, 204, 255, 0.356);
+  animation: bounce 1.5s linear infinite;
 }
 
 .frontendELetter {
+  font-size: 60px;
+  font-weight: initial;
+  color: #ffa1f7;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(38, 204, 255, 0.356);
+  animation: bounce 1.5s linear infinite;
+}
+
+.hyphen {
+  font-size: 60px;
+  color: #8ef1bb;
+  font-family: "Ewert", serif;
+  text-shadow: 3px 5px 5px rgba(231, 110, 211, 0.356);
+  animation: bounce 1.5s linear infinite;
 }
 
 .frontendNTwoLetter {
+  font-size: 60px;
+  font-weight: initial;
+  color: #ffa1f7;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(38, 204, 255, 0.356);
+  animation: bounce 1.5s linear infinite;
 }
 
 .frontendDLetter {
+  font-size: 63px;
+  font-weight: bold;
+  color: #ba7eeb;
+  font-family: "Rubik Puddles", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(70, 187, 223, 0.356);
+  animation: bounce 2s linear infinite;
 }
 
 /* DEVELOPER word */
 
-.developerDLetter {
+@keyframes glitch {
+  0% {
+    text-shadow: -2px -2px 0 red, 2px 2px 0 blue;
+  }
+  50% {
+    text-shadow: 2px -2px 0 blue, -2px 2px 0 red;
+  }
+  100% {
+    text-shadow: -2px -2px 0 red, 2px 2px 0 blue;
+  }
 }
-.developerELetter {
-}
-.developerVLetter {
-}
-.developerETwoLetter {
-}
-.developerLLetter {
-}
-.developerOLetter {
-}
-.developerPLetter {
-}
-.developerEThreeLetter {
-}
+
+.developerDLetter,
+.developerELetter,
+.developerVLetter,
+.developerETwoLetter,
+.developerLLetter,
+.developerOLetter,
+.developerOLetter,
+.developerPLetter,
+.developerEThreeLetter,
 .developerRLetter {
+  font-size: 63px;
+  font-weight: none;
+  color: #00e1ff;
+  font-family: "Rubik Glitch", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: glitch 1s linear infinite;
 }
 
 /* TAKE word */
 
 .takeTLetter {
+  font-size: 63px;
+  font-weight: none;
+  color: #f350eb;
+  font-family: "Rubik Glitch", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: glitch 1s linear infinite;
 }
 .takeALetter {
+  font-size: 63px;
+  font-weight: none;
+  color: #f350eb;
+  font-family: "Rubik Glitch", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: glitch 1s linear infinite;
 }
 .takeKLetter {
+  font-size: 63px;
+  font-weight: none;
+  color: #f350eb;
+  font-family: "Rubik Glitch", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: glitch 1s linear infinite;
 }
 .takeELetter {
+  font-size: 63px;
+  font-weight: none;
+  color: #f350eb;
+  font-family: "Rubik Glitch", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
 }
 
 /* UP word */
 
 .upULetter {
+  font-size: 67px;
+  font-weight: none;
+  color: #4cf7a1;
+  font-family: "Mate SC", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: wiggle 1s linear infinite;
 }
 .upPLetter {
+  font-size: 67px;
+  font-weight: none;
+  color: #4cf7a1;
+  font-family: "Mate SC", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: wiggle 1s linear infinite;
 }
 
 /* GARDENING word */
 
-.gardeningGLetter {
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.gardeningALetter {
-}
-.gardeningRLetter {
-}
-.gardeningDLetter {
-}
-.gardeningELetter {
-}
-.gardeningNLetter {
-}
-.gardeningILetter {
-}
-.gardeningNTwoLetter {
-}
-.gardeningGTwoLetter {
+
+.gardeningGLetter,
+.gardeningALetter,
+.gardeningRLetter,
+.gardeningDLetter,
+.gardeningELetter,
+.gardeningNLetter,
+.gardeningILetter,
+.gardeningNTwoLetter,
+.gardeningGTwoLetter,
+.question-mark {
+  font-size: 70px;
+  font-weight: none;
+  color: #4cf7a1;
+  font-family: "Mate SC", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(109, 207, 236, 0.356);
+  animation: pulse 3s linear infinite;
 }
 
 /* BECAUSE word */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
 
 .becauseBLetter {
+  font-size: 70px;
+  font-weight: none;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseELetter {
+  font-size: 72px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseCLetter {
+  font-size: 74px;
+  font-weight: none;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseALetter {
+  font-size: 76px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseULetter {
+  font-size: 78px;
+  font-weight: none;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseSLetter {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .becauseETwoLetter {
+  font-size: 82px;
+  font-weight: none;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 
 /* THEY word */
 
 .theyTLetter {
+  font-size: 85px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 5s linear infinite;
 }
 .theyHLetter {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 4s linear infinite;
 }
 .theyELetter {
+  font-size: 75px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 .theyYLetter {
+  font-size: 70px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 2s linear infinite;
 }
 
 /* WANTED word */
 
-.wantedWLetter {
-}
-.wantedALetter {
-}
-.wantedNLetter {
-}
-.wantedTLetter {
-}
-.wantedELetter {
-}
+.wantedWLetter,
+.wantedALetter,
+.wantedNLetter,
+.wantedTLetter,
+.wantedELetter,
 .wantedDLetter {
+  font-size: 70px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 3s linear infinite;
 }
 
 /* TO word */
 
 .toTLetter {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 2s linear infinite;
 }
 .toOLetter {
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Kalnia Glaze", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(255, 0, 157, 0.356);
+  animation: float 2s linear infinite;
 }
 
 /* IMPROVE word */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-.improveILetter {
-}
-.improveMLetter {
-}
-.improvePLetter {
-}
-.improveRLetter {
-}
-.improveOLetter {
-}
-.improveVLetter {
-}
+.improveILetter,
+.improveMLetter,
+.improvePLetter,
+.improveRLetter,
+.improveOLetter,
+.improveVLetter,
 .improveELetter {
+  font-size: 70px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: spin 30s ease-in-out infinite;
 }
 
 /* THEIR word */
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .theirTLetter {
+  font-size: 90px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: typing 2s steps(12, end) forwards, blink 0.5s infinite;
 }
 .theirHLetter {
+  font-size: 80px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: typing 2s steps(12, end) forwards, blink 0.5s infinite;
 }
 .theirELetter {
+  font-size: 70px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: typing 2s steps(12, end) forwards, blink 0.5s infinite;
 }
 .theirILetter {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: typing 2s steps(12, end) forwards, blink 0.5s infinite;
 }
 .theirRLetter {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fcab15e3;
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: typing 2s steps(12, end) forwards, blink 0.5s infinite;
 }
 
 /* ROOT word */
-
-.rootRLetter {
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-.rootOLetter {
-}
-.rootOTwoLetter {
-}
+.rootRLetter,
+.rootOLetter,
+.rootOTwoLetter,
 .rootTLetter {
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(red, green, blue, alpha);
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.37),
+    rgba(255, 166, 0, 0.527),
+    rgba(255, 255, 0, 0.589),
+    rgba(0, 128, 0, 0.459),
+    rgba(0, 0, 255, 0.322),
+    rgba(76, 0, 130, 0.452),
+    rgba(238, 130, 238, 0.39)
+  );
+  background-size: 400% 400%;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: rainbow 5s infinite ease-in-out;
 }
 
 /* SKILLS word */
 
-.skillsSLetter {
-}
-.skillsKLetter {
-}
-.skillsILetter {
-}
-.skillsLLetter {
-}
-.skillsLTwoLetter {
-}
-.skillsSTwoLetter {
-}
-
-/* SYMBOLS */
-
-.hyphen {
-}
+.skillsSLetter,
+.skillsKLetter,
+.skillsILetter,
+.skillsLLetter,
+.skillsLTwoLetter,
+.skillsSTwoLetter,
 .exclamation-mark {
-}
-.question-mark {
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(red, green, blue, alpha);
+  font-family: "Ewert", serif;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.37),
+    rgba(255, 166, 0, 0.527),
+    rgba(255, 255, 0, 0.589),
+    rgba(0, 128, 0, 0.459),
+    rgba(0, 0, 255, 0.322),
+    rgba(76, 0, 130, 0.452),
+    rgba(238, 130, 238, 0.39)
+  );
+  background-size: 400% 400%;
+  text-shadow: 3px 5px 5px rgba(231, 255, 19, 0.356);
+  animation: rainbow 5s infinite ease-in-out;
 }
